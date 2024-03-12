@@ -33,10 +33,14 @@ const JobsList = () => {
     },
   ]);
 
+  const [language] = useState('en');
+
+  const tableHeaderClass = language === 'en' ? 'thead-dark' : 'thead-light';
+
   return (
     <div>
       <table className="table">
-        <thead className="thead-dark">
+        <thead className={tableHeaderClass}>
           <tr>
             <th scope="col">#</th>
             <th scope="col"> <FormattedMessage id="Position"/> </th>
